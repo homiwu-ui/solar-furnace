@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太陽爐自動追日系統 — 國小科展專案</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        main {
+            padding: 40px 20px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #ff6a88;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ff6a88;
+            padding-bottom: 10px;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #ff6a88;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: #ff9a56;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .image-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .image-card .caption {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .footer-links {
+            margin-top: 15px;
+        }
+        
+        .footer-links a {
+            color: #ff9a56;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>☀️ 太陽爐自動追日系統</h1>
+            <div class="subtitle">國小科展專案 — 完整製作教學</div>
+        </header>
+        
+        <main>
+            <section class="section">
+                <h2>📊 專案統計</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Word 教學文件</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">技術圖表</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">論文章節</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">電路版本</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>📄 Word 教學文件</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>初版教學手冊</h3>
+                        <p>純文字+表格版本，適合快速瀏覽</p>
+                        <a href="tools/科展-太陽爐自動追日系統/國小科展-太陽爐自動追日系統組裝教學.docx" class="btn">下載</a>
+                    </div>
+                    <div class="card">
+                        <h3>加強版教學手冊</h3>
+                        <p>8章+附錄，含彩色表格、小知識框、警告框</p>
+                        <a href="tools/科展-太陽爐自動追日系統/國小科展-太陽爐自動追日系統組裝教學-加強版.docx" class="btn">下載</a>
+                    </div>
+                    <div class="card">
+                        <h3>第4章轉動載臺細部說明</h3>
+                        <p>水平轉動盤、垂直轉動機構、安裝馬達與齒輪</p>
+                        <a href="tools/科展-太陽爐自動追日系統/第4章-製作轉動載臺-細部說明.docx" class="btn">下載</a>
+                    </div>
+                    <div class="card">
+                        <h3>Arduino 版製作手冊</h3>
+                        <p>Arduino 版完整製作手冊（8章+附錄）</p>
+                        <a href="tools/科展-太陽爐自動追日系統/Arduino版-雙軸追日系統製作手冊.docx" class="btn">下載</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>🖼️ 技術圖表</h2>
+                <div class="image-grid">
+                    <div class="image-card">
+                        <img src="tools/科展-太陽爐自動追日系統/技術圖/001_整體3D結構圖.png" alt="整體3D結構圖">
+                        <div class="caption">整體3D結構圖</div>
+                    </div>
+                    <div class="image-card">
+                        <img src="tools/科展-太陽爐自動追日系統/技術圖/002_爆炸圖.png" alt="爆炸圖">
+                        <div class="caption">爆炸圖（組裝順序）</div>
+                    </div>
+                    <div class="image-card">
+                        <img src="tools/科展-太陽爐自動追日系統/技術圖/003_側面結構圖.png" alt="側面結構圖">
+                        <div class="caption">側面結構圖</div>
+                    </div>
+                    <div class="image-card">
+                        <img src="tools/科展-太陽爐自動追日系統/技術圖/004_水平轉動盤詳細圖.png" alt="水平轉動盤詳細圖">
+                        <div class="caption">水平轉動盤詳細圖</div>
+                    </div>
+                    <div class="image-card">
+                        <img src="tools/科展-太陽爐自動追日系統/技術圖/005_電路接線圖.png" alt="電路接線圖">
+                        <div class="caption">Arduino 電路接線圖</div>
+                    </div>
+                    <div class="image-card">
+                        <img src="tools/科展-太陽爐自動追日系統/技術圖/006_完成作品圖.png" alt="完成作品圖">
+                        <div class="caption">完成作品示意圖</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>📝 研究文件</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>研究設計</h3>
+                        <p>研究方法、操作/應變/控制變數、研究價值</p>
+                        <a href="tools/科展-太陽爐自動追日系統/研究設計.md" class="btn">查看</a>
+                    </div>
+                    <div class="card">
+                        <h3>完整科展文章</h3>
+                        <p>8 節完整論文（摘要/動機/目的/設備/方法/結果/討論/結論/參考資料）</p>
+                        <a href="tools/科展-太陽爐自動追日系統/完整科展文章.md" class="btn">查看</a>
+                    </div>
+                    <div class="card">
+                        <h3>硬體製作方法</h3>
+                        <p>太陽爐本體 + 載臺 + 電路 + 結合流程 + 安全注意</p>
+                        <a href="tools/科展-太陽爐自動追日系統/硬體製作方法.md" class="btn">查看</a>
+                    </div>
+                    <div class="card">
+                        <h3>減速馬達規格與電路圖</h3>
+                        <p>TT/N20 規格、完整電路圖、材料清單</p>
+                        <a href="tools/科展-太陽爐自動追日系統/減速馬達規格與電路圖.md" class="btn">查看</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>🔧 製作工具</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>產生初版 Word 教學手冊</h3>
+                        <p>Python 腳本，產生純文字+表格版本</p>
+                        <a href="tools/科展-太陽爐自動追日系統/產生教學檔.py" class="btn">查看</a>
+                    </div>
+                    <div class="card">
+                        <h3>產生加強版 Word 教學手冊</h3>
+                        <p>Python 腳本，產生彩色表格、小知識框、警告框版本</p>
+                        <a href="tools/科展-太陽爐自動追日系統/產生加強版教學檔.py" class="btn">查看</a>
+                    </div>
+                    <div class="card">
+                        <h3>產生第4章轉動載臺</h3>
+                        <p>Python 腳本，產生第4章細部說明</p>
+                        <a href="tools/科展-太陽爐自動追日系統/產生第4章轉動載臺.py" class="btn">查看</a>
+                    </div>
+                    <div class="card">
+                        <h3>產生 Arduino 版設計手冊</h3>
+                        <p>Python 腳本，產生 Arduino 版製作手冊</p>
+                        <a href="tools/科展-太陽爐自動追日系統/產生Arduino版設計手冊.py" class="btn">查看</a>
+                    </div>
+                    <div class="card">
+                        <h3>產生 6 張技術圖</h3>
+                        <p>Python 腳本，使用 matplotlib 產生工程線稿圖</p>
+                        <a href="tools/科展-太陽爐自動追日系統/產生6張技術圖.py" class="btn">查看</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>太陽爐自動追日系統 — 國小科展專案</p>
+            <div class="footer-links">
+                <a href="https://github.com/homiwu-ui/solar-furnace">GitHub Repo</a>
+                <a href="https://github.com/homiwu-ui/solar-furnace/issues">問題回報</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
