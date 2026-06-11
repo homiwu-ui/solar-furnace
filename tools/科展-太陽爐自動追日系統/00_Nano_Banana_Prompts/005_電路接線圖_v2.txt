@@ -1,0 +1,23 @@
+# 005 電路接線圖 v2（修正版）
+
+Breadboard wiring diagram for Arduino dual-axis solar tracker, suitable for elementary school students.
+
+Layout shows:
+- Arduino UNO board at left side of breadboard
+- 4x LDR (light dependent resistors) at top of breadboard, each with one leg connected to 5V rail
+- 4x 10K resistors below each LDR, connecting LDR other leg to GND rail
+- Junction between LDR and 10K resistor connected to Arduino analog pins via colored jumper wires:
+  - Left LDR junction → A0 (blue wire)
+  - Right LDR junction → A1 (blue wire)
+  - Top LDR junction → A2 (blue wire)
+  - Bottom LDR junction → A3 (blue wire)
+- 2x MG996R servo motors at right: Signal wires (orange) to D9 (horizontal) and D10 (vertical), power wires (red) to external 5V+ rail, ground wires (brown) to GND rail
+- External 5V 2A power supply at bottom right, connected to breadboard power rails
+- On/Off switch on 5V line
+- 2x LEDs with 220Ω resistors: Red LED on D13 (system running), Green LED on D12 (sun aligned)
+
+Each wire color-coded: Red=5V, Black=GND, Blue=analog signal, Orange=PWM signal, Yellow=LED. All connection points labeled with correct pin numbers (A0, A1, A2, A3 — NOT "ABII"). Simple, uncluttered layout, 400-hole breadboard.
+
+Style: Clean, colorful, cartoonish component icons (not real photos), large text labels, arrows showing wire paths. Suitable for children. Labels in Traditional Chinese.
+
+CRITICAL: The analog pins must be labeled A0, A1, A2, A3. Do NOT generate any garbled text like "ABII". Use clear, correct text labels.

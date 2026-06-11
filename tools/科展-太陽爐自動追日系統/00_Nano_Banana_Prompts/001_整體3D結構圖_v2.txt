@@ -1,0 +1,17 @@
+# 001 整體 3D 結構圖 v2（修正版）
+
+Generate a 3D isometric view of a DIY wooden dual-axis solar tracker platform for a solar furnace, suitable for elementary school science fair.
+
+The structure includes:
+① Bottom base: 30x30cm wooden board with anti-slip pads at four corners
+② Center shaft: M8 threaded rod (15cm long) fixed vertically at base center with nuts
+③ Turntable: 25x25cm wooden board with 4x 608ZZ ball bearings embedded in a cross pattern near center (3cm from center, 90° apart), rotating on center shaft
+④ Upright columns: Two 2x2x20cm wooden bars screwed to turntable, each with a 6mm hole at top
+⑤ Solar furnace: Parabolic mirror assembly (18-segment acrylic) mounted between columns via M6 screw shafts as rotation axis, tiltable 0° to 80°
+⑥ Horizontal servo motor: MG996R metal gear servo (9-10 kg·cm torque) mounted on base, with 10T pinion gear driving 60T gear on turntable bottom
+⑦ Vertical servo motor: MG996R metal gear servo mounted on one upright column, connecting rod linked to furnace rotation shaft
+⑧ Counterweight: ~300g weight hanging on back side of furnace via wire to balance vertical load
+
+IMPORTANT NOTE: Do NOT show any "TT motor" labels or warnings. This version uses MG996R metal gear servos exclusively. Do NOT include any comparison boxes showing other motor types.
+
+Style: Clean technical illustration, warm wood tones (light brown), blue-gray metal parts, white background, soft studio lighting, numbered callouts (①-⑧) with leader lines pointing to each component, educational diagram style suitable for children. 3D isometric view, labels in Traditional Chinese.

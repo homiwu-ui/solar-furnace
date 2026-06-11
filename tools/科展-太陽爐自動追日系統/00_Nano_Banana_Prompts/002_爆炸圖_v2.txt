@@ -1,0 +1,16 @@
+# 002 爆炸圖 v2（修正版）
+
+Exploded view diagram of a DIY wooden dual-axis solar tracker. Components separated vertically along Y-axis, showing assembly sequence from bottom to top:
+
+Bottom layer: 30x30cm wooden base plate with center hole (8.5mm), anti-slip pads at corners
+Second layer: M8 threaded rod (15cm) standing upright from base center, secured with nuts
+Third layer: 25x25cm wooden turntable with 8.5mm center hole, 4x 608ZZ ball bearings embedded in cross pattern (22mm recessed holes at 3cm from center)
+Fourth layer: Two 2x2x20cm wooden upright columns, each with 6mm hole at top
+Fifth layer: M6 screw shafts (10cm) passing through column top holes
+Sixth layer: Solar furnace parabolic mirror (18-segment acrylic mirror dish) with wooden mounting blocks on each side
+Seventh layer: Two MG996R metal gear servo motors (9-10 kg·cm torque) — one near base for horizontal drive, one on column for vertical tilt
+Eighth layer: 60-tooth gear (on turntable bottom) and 10-tooth pinion (on horizontal motor)
+
+Each component floating with 2cm spacing, dashed vertical alignment lines showing assembly path. Warm wood tones, metallic gear details, ball bearings shown as silver rings with visible steel balls. Explosion lines connecting matched holes. Labels in Traditional Chinese with part names and quantities.
+
+IMPORTANT: No TT motor labels. This version uses MG996R metal gear servos only.

@@ -1,0 +1,15 @@
+# 004 水平轉動盤詳細圖 v2（修正版）
+
+Top-down and cross-section view of horizontal rotating platform:
+
+Top view (left half of image): 25x25cm square turntable with 4x 608ZZ bearing positions marked as circles in cross pattern around center hole, 60T gear shown as dashed circle on turntable perimeter
+
+Cross-section A-A (right half of image): Vertical cut showing 30cm base on bottom, M8 threaded rod center shaft (15cm), 4x ball bearings between base and turntable creating 7mm gap, turntable floating on bearings, 60T gear on turntable bottom meshing with 10T pinion on MG996R motor shaft
+
+Detail callout: Zoom circle showing bearing placement — bearing outer ring fixed in turntable recess, inner ring riding on center shaft
+
+IMPORTANT label corrections:
+- The motor label should read: "MG996R 伺服馬達 + 小齒輪 10T" (motor with 10T pinion)
+- NOT "60齒大座齒輪" on the motor side — the 60T gear is on the turntable, the motor has the 10T pinion
+
+Color: Warm wood brown for wood parts, silver/gray for bearings and shaft, blue-gray for motor, orange for gear teeth. Labels in Traditional Chinese.

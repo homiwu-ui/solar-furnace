@@ -1,0 +1,20 @@
+# 006 完成作品圖 v2（修正版）
+
+Final assembled dual-axis solar tracker with solar furnace, outdoor setting.
+
+Sunny day scene: The complete tracker sitting on a wooden table in a schoolyard or garden. Solar furnace (parabolic mirror dish made of 18 reflective acrylic segments) mounted on wooden dual-axis platform. The system is tracking the sun — sun visible in upper left sky with light rays hitting the mirror surface and converging at the focal point where a small pot is suspended. The Arduino UNO board and breadboard are visible on the base platform with colorful jumper wires. Green LED indicator glowing. The entire structure looks clean, well-organized, and kid-built.
+
+CRITICAL label corrections:
+- Label the horizontal motor at the base as: "水平 MG996R 伺服馬達"
+- Label the vertical motor on the column as: "垂直 MG996R 伺服馬達"
+- Do NOT combine them into one label "MG996R 伺服馬達 (水平 & 垂直)"
+- Each motor must have its own separate label with leader line
+
+Other labels to include:
+- "拋物面反射鏡 (18片式)" pointing to the mirror dish
+- "Arduino 控制系統" pointing to the Arduino + breadboard
+- "光敏電阻 (LDR)" pointing to sensors on furnace rim
+- "焦距 (Focal Point)" pointing to where light converges
+- "360° 水平旋轉" and "垂直翻轉 0°-80°" as dimension annotations
+
+Style: Warm, inviting, educational illustration. Bright sunlight, soft shadows, slightly cartoonish but technically accurate. The wooden parts show natural wood grain texture. Labels identifying main components with leader lines. Suitable for science fair display poster. Labels in Traditional Chinese. Textured paper background.

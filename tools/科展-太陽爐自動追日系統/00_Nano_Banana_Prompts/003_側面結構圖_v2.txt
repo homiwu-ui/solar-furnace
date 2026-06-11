@@ -1,0 +1,17 @@
+# 003 側面結構圖 v2（修正版）
+
+Side view (elevation) diagram of dual-axis solar tracker:
+
+Left side: 30cm base on ground, 25cm turntable above with 5mm gap (not "25cm gap" — the gap is only 5mm, the turntable is 25cm wide)
+Center: M8 threaded rod center shaft (15cm tall)
+Upright columns: 20cm tall, left and right
+Solar furnace: Parabolic dish shape between columns, tiltable from 0° to 80°
+Horizontal motor: MG996R on base right side, 10T pinion engaging 60T turntable gear
+Vertical motor: MG996R on right column, linkage to furnace rotation shaft
+Counterweight: Wire + weight hanging from furnace back left side
+LDR sensor positions: 4 small circles on furnace rim (left, right, top, bottom)
+Key dimensions labeled: 30cm base width, 25cm turntable (not "25cm gap"), 20cm column height, 15cm shaft, 10cm focal length from dish center
+
+Style: Clean line drawing with light color fill, dimension lines with arrows, 1:10 scale indication, white background, suitable for children's instruction manual. Labels in Traditional Chinese.
+
+IMPORTANT: The gap between base and turntable is 5mm, not 25cm. 25cm is the turntable width.
